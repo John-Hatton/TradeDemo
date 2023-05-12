@@ -835,6 +835,7 @@ FodyWeavers.xsd
 Saved/
 Intermediate/
 .vs/
+.vsconfig
 TradeDemo.sln
 .idea/
 Plugins/
