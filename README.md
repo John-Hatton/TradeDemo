@@ -51,3 +51,20 @@ IBuilding: This interface could be used for any object that can be built by play
 ITask: This interface could be used for any task that needs to be completed in the game, such as gathering resources, 
 building structures, and completing quests.
 
+---
+
+## Testing 
+
+For the first time in an Unreal Project, I've decided to incorporate Unit tests into my development. This project is a 
+rather complicated one, and I'm hoping to spend quite a lot of time adjusting these base classes, so extending them to 
+my blueprint classes, once I get to that stage, will be a walk in the park. To aid in this process, I've written some
+basic Unit Tests. The goal is to write new tests, before implementing any functionality. The tests should fail. In fact, 
+as of posting this pull request, there are tests that are failing. We want this, so that we can go in later, and 
+implement the missing functionality. Eventually, I plan to incorporate a Github action, which will run all the tests, 
+and report back. After which, I would then incorporate a Build status indicator, but one thing at a time here.
+
+Please see the test cases in the test folder, and try to come up with your own tests in the future. This models the 
+Unreal Engine guide on writing test cases.
+
+---
+
