@@ -60,6 +60,26 @@ protected:
 	 */
 	void LookUp(float Value);
 
+	/**
+	 * Initiate Jumping for the Character
+	 */
+	void Jump();
+
+	/**
+	 * Terminate Jumping for the Character
+	 */
+	void StopJumping();
+
+	/**
+	 * Initiate Crouching for the Character
+	 */
+	void Crouch();
+
+	/**
+	 * Terminate Crouching for the Character
+	 */
+	void UnCrouch();
+
 	// Health / Networking / Replication Code 
 
 

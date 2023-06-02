@@ -67,6 +67,10 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMyPlayer::MoveRight);
 	PlayerInputComponent->BindAxis("Turn", this, &AMyPlayer::Turn);
 	PlayerInputComponent->BindAxis("LookUp", this, &AMyPlayer::LookUp);
+	// bind the jump action to the Jump function of the Character class
+    PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyPlayer::Jump);
+    PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMyPlayer::StopJumping);
+}
 }
 
 void AMyPlayer::MoveForward(float Value)
@@ -130,6 +134,26 @@ float AMyPlayer::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent,
 	float damageApplied = CurrentHealth - DamageAmount;
 	SetCurrentHealth(damageApplied);
 	return damageApplied;
+}
+
+void AMyPlayer::Jump()
+{
+	// TODO: Implement Jump function
+}
+
+void AMyPlayer::StopJumping()
+{
+    // TODO: Implement StopJumping function
+}
+
+void AMyPlayer::Crouch()
+{
+	// TODO: Implement Crouch function
+}
+
+void AMyPlayer::UnCrouch()
+{
+	// TODO: Implement UnCrouch function
 }
 
 void AMyPlayer::Interact()
