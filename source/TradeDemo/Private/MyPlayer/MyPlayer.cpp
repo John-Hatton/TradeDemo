@@ -16,6 +16,17 @@ AMyPlayer::AMyPlayer()
 {
 	// Set this pawn to call Tick() every frame.  
 	PrimaryActorTick.bCanEverTick = true;
+
+	// Assuming you are in the constructor of your character class (AMyCharacter::AMyCharacter())
+	auto MeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh"));
+	MeshComp->SetupAttachment(RootComponent);  // Assuming RootComponent is valid
+
+	// Then you can load a skeletal mesh asset and assign it to this component
+	// static ConstructorHelpers::FObjectFinder<USkeletalMesh> MeshAsset(TEXT("/Game/PathToYourAsset.YourAssetName"));
+	// if(MeshAsset.Succeeded())
+	// {
+	// 	MeshComp->SetSkeletalMesh(MeshAsset.Object);
+	// }
 	
 	// Set the default values for the health
 	MaxHealth = 100.0f;
@@ -70,7 +81,10 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	// bind the jump action to the Jump function of the Character class
     PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyPlayer::Jump);
     PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMyPlayer::StopJumping);
-}
+	// bind the crouch action to the Crouch function of the Character class
+	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AMyPlayer::Crouch);
+	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &AMyPlayer::UnCrouch);
+
 }
 
 void AMyPlayer::MoveForward(float Value)
