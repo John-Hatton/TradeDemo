@@ -23,10 +23,10 @@ void AItem::Tick(float DeltaTime)
 
 }
 
-
-void AItem::TakeDamage(float Amount)
+float AItem::TakeDamage(float DamageTaken, FDamageEvent const& DamageEvent, AController* EventInstigator,
+	AActor* DamageCauser)
 {
-	// implementation of item taking damage
+	return Super::TakeDamage(DamageTaken, DamageEvent, EventInstigator, DamageCauser);
 }
 
 void AItem::Interact()

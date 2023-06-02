@@ -42,7 +42,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animal")
 	FString Behavior;
 
-	virtual void TakeDamage(float Amount) override;
+	virtual float TakeDamage( float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser ) override;
 	virtual void Interact() override;
 
 	

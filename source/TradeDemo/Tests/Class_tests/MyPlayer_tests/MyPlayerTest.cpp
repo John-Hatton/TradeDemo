@@ -1,20 +1,41 @@
-﻿#include "MyPlayer/MyPlayer.h"
+﻿#include "Editor.h"
+#include "Engine/DamageEvents.h"
+#include "TradeDemo/Classes/MyPlayer/MyPlayer.h"
+#include "TradeDemo/Interfaces/IInteractable/Interactable.h"
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FPlayerInit_Test, "TradeDemo.PlayerTests.Initialization_Test", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FPlayerTakeDamage_Test, "TradeDemo.PlayerTests.TakeDamage_Test", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
-bool FPlayerInit_Test::RunTest(const FString& Parameters)
+bool FPlayerTakeDamage_Test::RunTest(const FString& Parameters)
 {
-	AMyPlayer* TestPlayer = NewObject<AMyPlayer>();
+	UWorld* World = GWorld;
+	FActorSpawnParameters SpawnParams;
     
-	TestPlayer->Health = 100.0f;
-	TestPlayer->Speed = 50.0f;
+	AMyPlayer* TestPlayer = World->SpawnActor<AMyPlayer>(AMyPlayer::StaticClass(), SpawnParams);
+	TestPlayer->SetCanBeDamaged(true); // Ensure the player can be damaged
+	float DamageAmount;
 
-	TestEqual("Test if Player Health is initialized correctly", TestPlayer->Health, 100.0f);
-	TestEqual("Test if Player Speed is initialized correctly", TestPlayer->Speed, 50.0f);
+	// Create mock objects for the additional parameters.
 
-	return true;
+	// Mock Damage Event
+	FPointDamageEvent MockDamageEvent;
+	MockDamageEvent.Damage = 20.0f;
+	DamageAmount = MockDamageEvent.Damage;
+	MockDamageEvent.ShotDirection = FVector(1.f, 0.f, 0.f);
+	MockDamageEvent.HitInfo = FHitResult();
+
+	// Mock PlayerController
+	APlayerController* EventInstigator = World->SpawnActor<APlayerController>(APlayerController::StaticClass(), SpawnParams);
+	EventInstigator->SetPawn(TestPlayer); // The controller should control the player
+
+	// Mock Pawn
+	APawn* DamageCauser = World->SpawnActor<APawn>(APawn::StaticClass(), SpawnParams);
+
+	// Call TakeDamage with the additional parameters;
+	TestPlayer->TakeDamage(DamageAmount, MockDamageEvent, EventInstigator, DamageCauser);
+
+	// Expect the player's health to be reduced by the actual damage amount
+	return TestEqual("Test if Player health decreases correctly", TestPlayer->GetCurrentHealth(), 80.0f);
 }
 
-// TODO: Test player movements and interactions in the world.
-// TODO: Test what happens when the player's health reaches zero.
-// TODO: Test player's inventory operations and trading actions.
+
+

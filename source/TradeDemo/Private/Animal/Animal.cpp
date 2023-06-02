@@ -32,10 +32,10 @@ void AAnimal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-void AAnimal::TakeDamage(float Amount)
+float AAnimal::TakeDamage(float DamageTaken, FDamageEvent const& DamageEvent, AController* EventInstigator,
+	AActor* DamageCauser)
 {
-	Health -= Amount;
-	// add any additional damage handling code here
+	return Super::TakeDamage(DamageTaken, DamageEvent, EventInstigator, DamageCauser);
 }
 
 void AAnimal::Interact()

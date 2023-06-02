@@ -40,7 +40,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 	float Value;
 
-	virtual void TakeDamage(float Amount) override;
+	virtual float TakeDamage( float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser ) override;
 	virtual void Interact() override;
 	virtual void AddToInventory() override;
 	virtual void RemoveFromInventory() override;

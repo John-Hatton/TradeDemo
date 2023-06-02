@@ -16,5 +16,5 @@ class TRADEDEMO_API IDamagable
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void TakeDamage(float Amount) = 0;
+	virtual float TakeDamage(float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) = 0;
 };
