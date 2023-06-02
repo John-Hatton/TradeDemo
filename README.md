@@ -4,7 +4,44 @@
 
 ## Introduction
 
-This project is a demo which sets out to make functional trading work from the start. 
+This project is a demo which sets out to make functional trading work from the start. Much effort has been put into the 
+design of a few key classes and interfaces, which should be expanded, as the game functionality grows. The idea is to 
+have much of the functionality in C++, and then use this to our advantage, as we generate Blueprint classes.
+
+---
+
+## Project Startup
+
+To get started with this project, you will need to Download UE5 from the Epic Games Launcher, or compile the Engine from
+source. Once you've got a working engine, simply clone the repository.
+
+Getting things working can be a bit tricky, but here's my preferred setup.
+
+    1. Install Visual Studio Community, see the following link to ensure you have the right settings selected:
+
+https://docs.unrealengine.com/5.2/en-US/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine/
+
+Disregard the fact that it uses VS 2019, and opt for the newest version of Visual Studio.
+
+Next up is: 
+
+    2. Download and install Rider through the Jetbrains Toolbox
+
+https://www.jetbrains.com/toolbox-app/
+
+Once you have Rider installed, you will open up Unreal Engine, navigate to the settings, and change the default editor 
+to Rider. After you have done this close the engine.
+
+    3. Open Rider, and select the TradeDemo.sln file 
+
+Once rider opens up, you should be able to build, and Unreal Engine will ask you if you want to install RiderLink.
+
+If you are using the Epic Games launcher version of the Engine, then you will want to install the RiderLink plugin to 
+the game, however if you're using the compiled Github source version of the Engine, then you are able to install 
+RiderLink directly to the Engine. 
+
+Once it has finished installing, you can then build the project, and it will launch the Unreal Engine Editor when it is 
+done. From here the project should play as normal.
 
 ---
 
