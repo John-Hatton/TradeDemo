@@ -11,9 +11,10 @@ class UWeaponInterface : public UInterface
 	GENERATED_BODY()	
 };
 
-class IWeaponInterface
+class TRADEDEMO_API IWeaponInterface
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void Attack();
 };

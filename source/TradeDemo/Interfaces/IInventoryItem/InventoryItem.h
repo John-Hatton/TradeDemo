@@ -11,9 +11,11 @@ class UInventoryItem : public UInterface
 	GENERATED_BODY()	
 };
 
-class IInventoryItem
+class TRADEDEMO_API IInventoryItem
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void AddToInventory();
+	virtual void RemoveFromInventory();
 };

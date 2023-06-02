@@ -11,9 +11,10 @@ class UInteractable : public UInterface
 	GENERATED_BODY()	
 };
 
-class IInteractable
+class TRADEDEMO_API IInteractable
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void Interact();
 };

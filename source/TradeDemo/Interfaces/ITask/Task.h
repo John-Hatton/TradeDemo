@@ -11,9 +11,10 @@ class UTask : public UInterface
 	GENERATED_BODY()	
 };
 
-class ITask
+class TRADEDEMO_API ITask
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void CompleteTask();
 };

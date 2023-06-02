@@ -32,3 +32,14 @@ void AAnimal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void AAnimal::TakeDamage(float Amount)
+{
+	Health -= Amount;
+	// add any additional damage handling code here
+}
+
+void AAnimal::Interact()
+{
+	// implementation of interaction with animal
+}
+

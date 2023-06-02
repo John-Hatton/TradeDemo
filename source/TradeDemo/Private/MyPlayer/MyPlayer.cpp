@@ -32,3 +32,14 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void AMyPlayer::TakeDamage(float Amount)
+{
+	Health -= Amount;
+	// add any additional damage handling code here
+}
+
+void AMyPlayer::Interact()
+{
+	// implementation of interaction with player
+}
+

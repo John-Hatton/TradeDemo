@@ -11,9 +11,10 @@ class UBuilding : public UInterface
 	GENERATED_BODY()	
 };
 
-class IBuilding
+class TRADEDEMO_API IBuilding
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void Build();
 };

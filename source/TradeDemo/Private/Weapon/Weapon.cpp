@@ -25,3 +25,29 @@ void AWeapon::Tick(float DeltaTime)
 
 }
 
+
+void AWeapon::Interact()
+{
+	// implementation of interaction with weapon
+}
+
+void AWeapon::AddToInventory()
+{
+	// implementation of adding weapon to inventory
+}
+
+void AWeapon::RemoveFromInventory()
+{
+	// implementation of removing weapon from inventory
+}
+
+void AWeapon::Trade()
+{
+	// implementation of weapon being traded
+}
+
+void AWeapon::Attack()
+{
+	// implementation of weapon attack
+}
+

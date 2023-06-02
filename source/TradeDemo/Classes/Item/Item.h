@@ -29,4 +29,21 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Class Attributes and Properties
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+	FString Name;
+    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+	float Weight;
+    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+	float Value;
+
+	virtual void TakeDamage(float Amount) override;
+	virtual void Interact() override;
+	virtual void AddToInventory() override;
+	virtual void RemoveFromInventory() override;
+	virtual void Trade() override;
+
 };

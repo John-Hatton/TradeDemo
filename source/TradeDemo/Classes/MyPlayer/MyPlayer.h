@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "TradeDemo/Interfaces/IDamagable/Damagable.h"
 #include "TradeDemo/Interfaces/IInteractable/Interactable.h"
+#include "TradeDemo/Classes/Inventory/Inventory.h"
 #include "MyPlayer.generated.h"
 
 // A class that represents the player character. It contains properties such as
@@ -29,5 +30,17 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+	float Health;
+    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+	float Speed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+	UInventory* Inventory;
+
+	virtual void TakeDamage(float Amount) override;
+	virtual void Interact() override;
 
 };

@@ -29,4 +29,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual void Interact() override;
+	virtual void AddToInventory() override;
+	virtual void RemoveFromInventory() override;
+	virtual void Trade() override;
+	virtual void Attack() override;
 };

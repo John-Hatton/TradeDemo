@@ -11,9 +11,10 @@ class UTradeable : public UInterface
 	GENERATED_BODY()	
 };
 
-class ITradeable
+class TRADEDEMO_API ITradeable
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void Trade();
 };

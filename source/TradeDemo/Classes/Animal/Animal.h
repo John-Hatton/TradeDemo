@@ -31,4 +31,19 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Class Attributes and Properties
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animal")
+	float Health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animal")
+	float Speed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animal")
+	FString Behavior;
+
+	virtual void TakeDamage(float Amount) override;
+	virtual void Interact() override;
+
+	
 };

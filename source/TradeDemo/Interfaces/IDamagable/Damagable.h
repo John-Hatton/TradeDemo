@@ -11,9 +11,10 @@ class UDamagable : public UInterface
 	GENERATED_BODY()	
 };
 
-class IDamagable
+class TRADEDEMO_API IDamagable
 {
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
+	virtual void TakeDamage(float Amount);
 };
