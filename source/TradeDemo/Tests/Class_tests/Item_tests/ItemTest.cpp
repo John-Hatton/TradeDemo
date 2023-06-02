@@ -24,3 +24,7 @@ bool FItemInit_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test creating various items with different values and weights.
+// TODO: Test interaction with items such as picking them up and using them.
+// TODO: Test what happens when you try to interact with a non-interactive item.

@@ -14,3 +14,7 @@ bool FWeaponInit_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test equipping and unequipping the weapon.
+// TODO: Test damage output of the weapon and how it affects enemy health.
+// TODO: Test what happens when you try to use a weapon without ammunition (if applicable).

@@ -43,6 +43,10 @@ RiderLink directly to the Engine.
 Once it has finished installing, you can then build the project, and it will launch the Unreal Engine Editor when it is 
 done. From here the project should play as normal.
 
+
+!Please note that if you do not have access to rider, you can do all of this from Visual Studio, the project should 
+build fine, but if you have access to Jetbrains tools, Rider is worth the extra effort!!!
+
 ---
 
 ## Classes

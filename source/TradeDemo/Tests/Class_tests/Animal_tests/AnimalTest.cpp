@@ -14,3 +14,7 @@ bool FAnimalInit_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test the animal's movement, ensuring it can properly navigate the environment.
+// TODO: Test what happens when an animal's health reaches zero (does it die correctly?).
+// TODO: Test what happens when an animal tries to perform an action it can't, such as flying without having a flying ability.

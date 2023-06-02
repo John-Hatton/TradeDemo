@@ -18,3 +18,7 @@ bool FInventoryAddRemove_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test adding and removing items, especially edge cases such as attempting to add a null item, or removing an item that isn't in the inventory.
+// TODO: Test what happens when the weight capacity of the inventory is exceeded.
+// TODO: Test what happens when the inventory is empty and you try to remove an item.

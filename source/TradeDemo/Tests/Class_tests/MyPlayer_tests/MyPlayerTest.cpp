@@ -14,3 +14,7 @@ bool FPlayerInit_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test player movements and interactions in the world.
+// TODO: Test what happens when the player's health reaches zero.
+// TODO: Test player's inventory operations and trading actions.

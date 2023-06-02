@@ -16,3 +16,7 @@ bool FTradingSystemBuySell_Test::RunTest(const FString& Parameters)
 
 	return true;
 }
+
+// TODO: Test buying and selling items, especially edge cases such as trying to buy an item without enough money or sell an item not in inventory.
+// TODO: Test changes in the prices map, such as adding new items or removing existing ones.
+// TODO: Test transactions with non-existent items or non-existent players.
