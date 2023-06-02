@@ -36,6 +36,9 @@ public:
     
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
 	float Speed;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+	float Money;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
 	UInventory* Inventory;

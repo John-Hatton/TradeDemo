@@ -16,5 +16,5 @@ class TRADEDEMO_API IWeaponInterface
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void Attack();
+	virtual void Attack() = 0;
 };

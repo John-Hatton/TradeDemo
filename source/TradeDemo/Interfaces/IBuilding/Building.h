@@ -16,5 +16,5 @@ class TRADEDEMO_API IBuilding
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void Build();
+	virtual void Build() = 0;
 };

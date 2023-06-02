@@ -16,5 +16,5 @@ class TRADEDEMO_API ITask
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void CompleteTask();
+	virtual void CompleteTask() = 0;
 };

@@ -16,5 +16,5 @@ class TRADEDEMO_API IInteractable
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void Interact();
+	virtual void Interact() = 0;
 };

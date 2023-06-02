@@ -16,6 +16,6 @@ class TRADEDEMO_API IInventoryItem
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void AddToInventory();
-	virtual void RemoveFromInventory();
+	virtual void AddToInventory() = 0;
+	virtual void RemoveFromInventory() = 0;
 };

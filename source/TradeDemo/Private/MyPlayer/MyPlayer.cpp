@@ -9,6 +9,11 @@ AMyPlayer::AMyPlayer()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	// Initialize default values
+	Health = 100.0f;
+	Speed = 0.0f;
+	Money = 0.0f; // start player with no money
+
 }
 
 // Called when the game starts or when spawned

@@ -1,9 +1,8 @@
 ﻿#include "Inventory/Inventory.h"
 
-
 void UInventory::AddItem(AItem* Item)
 {
-	if ((Weight + Item->Weight) <= MaxWeight)
+	if (Item)
 	{
 		Items.Add(Item);
 		Weight += Item->Weight;
@@ -12,7 +11,7 @@ void UInventory::AddItem(AItem* Item)
 
 void UInventory::RemoveItem(AItem* Item)
 {
-	if (Items.Contains(Item))
+	if (Item && Items.Contains(Item))
 	{
 		Items.Remove(Item);
 		Weight -= Item->Weight;

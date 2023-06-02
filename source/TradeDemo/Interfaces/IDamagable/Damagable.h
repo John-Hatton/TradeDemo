@@ -16,5 +16,5 @@ class TRADEDEMO_API IDamagable
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void TakeDamage(float Amount);
+	virtual void TakeDamage(float Amount) = 0;
 };

@@ -16,5 +16,5 @@ class TRADEDEMO_API ITradeable
 	GENERATED_BODY()
 public:
 	// Add Interface Functions here:
-	virtual void Trade();
+	virtual void Trade() = 0;
 };
